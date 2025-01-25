@@ -1,0 +1,195 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte padrão */
+html, body {
+  height: 100%; /* Garante que o body ocupe 100% da altura */
+  display: flex;
+  flex-direction: column; /* Flexbox para estruturar conteúdo e footer */
+}
+
+body {
+  background-color: #1c1c1c;
+  color: #fff;
+  font-family: "freight-neo-pro", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* Barra de navegação */
+.navbar {
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  border-bottom: 1px solid #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  transition: color 0.2s ease;
+  font-size: 20px;
+}
+
+.nav-links li a:hover {
+  color: #ccc;
+}
+
+.nav-links .active a {
+  font-weight: 900;
+}
+
+.nav-logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #1c1c1c;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Seção "Sobre mim" */
+.about-section {
+  margin-top: 100px;
+  flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  width: 80%;
+}
+
+.about-image img {
+  max-width: 60%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-left: 100px;
+}
+
+.about-text {
+  max-width: 500px;
+  margin-right: 100px;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Botão centralizado abaixo do texto */
+.button {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin: 2rem auto 0;
+  max-width: 150px;
+}
+
+.button:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: auto; /* Garante que o footer seja "empurrado" para o final */
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .about-image img {
+    max-width: 80%;
+    margin-left: 0;
+  }
+
+  .about-text {
+    margin-top: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,107 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Configurações gerais do body */
+  body {
+    font-family: "freight-neo-pro", sans-serif;
+    font-weight: 300; /* Light */
+    font-style: normal;
+  
+    background-color: #202020; /* fundo escuro */
+    color: #fff;              /* texto claro */
+    height: 100vh;
+  }
+  
+  /* Seção hero */
+  .hero {
+    display: flex;
+    align-items: center;     /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Container do conteúdo (título, subtítulo etc.) */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Título principal (Black) */
+  .hero-title {
+    font-family: "freight-neo-pro", sans-serif;
+    font-weight: 700; /* Black */
+    font-style: normal;
+  
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Subtítulo (Light) */
+  .hero-subtitle {
+    font-family: "freight-neo-pro", sans-serif;
+    font-weight: 300; /* Light */
+    font-style: normal;
+  
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Botão (Light) */
+  .hero-button {
+    font-family: "freight-neo-pro", sans-serif;
+    font-weight: 900; /* Light */
+    font-style: normal;
+  
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .hero-button:hover {
+    transform: scale(1.05);
+    background-color: #f2f2f2;
+  }
+  
+  /* Links de redes sociais */
+  .hero-socials {
+    display: flex;
+    gap: 1.5rem; /* espaçamento entre ícones */
+    margin-top: 2rem;
+  }
+  
+  .hero-socials a {
+    color: #fff;
+    font-size: 1.4rem; /* ajuste conforme o ícone/texto */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .hero-socials a:hover {
+    color: #ccc;
+  }
+  
+  /* Responsividade simples (exemplo) */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+    .hero-button {
+      font-size: 0.9rem;
+    }
+  }
+  

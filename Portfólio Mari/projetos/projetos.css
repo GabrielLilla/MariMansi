@@ -1,0 +1,243 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte padrão do corpo */
+body {
+  background-color: #1c1c1c;
+  color: #fff;
+  font-family: "freight-neo-pro", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* Barra de navegação */
+.navbar {
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  border-bottom: 1px solid #333;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 10; 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  transition: color 0.2s ease;
+  font-size: 20px;
+}
+
+.nav-links li a:hover {
+  color: #ccc;
+}
+
+.nav-links .active a {
+  font-weight: 900;
+}
+
+.nav-logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  display: none; /* Escondido por padrão */
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: row; /* Organiza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 1rem;
+    background-color: #1c1c1c;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+.nav-logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/* Seção inicial (intro) */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh; /* Reduz um pouco a altura */
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.intro-text {
+  max-width: 700px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.intro-title {
+  font-family: "freight-neo-pro", sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8rem;
+}
+
+/* Ícone de rolagem (seta PNG) */
+.scroll-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-top: 1rem;
+}
+
+.scroll-icon img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.scroll-icon:hover img {
+  transform: translateY(10px);
+}
+
+/* Seção de projetos */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Sempre 2 imagens por linha */
+  column-gap: 15rem; /* Espaçamento entre imagens */
+  row-gap: 2rem;
+  padding: 3rem 5%;
+  margin-top: -50px; /* Ajuste para subir os projetos */
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Cartão de projeto */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 30px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 900;
+  
+}
+
+.project-card:hover .project-overlay {
+  display: block;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr; /* Em telas pequenas, uma coluna */
+  }
+
+  .intro-title {
+    font-size: 2.5rem;
+  }
+
+  .intro-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #ccc;
+}
