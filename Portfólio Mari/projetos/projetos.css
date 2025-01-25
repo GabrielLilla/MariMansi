@@ -52,7 +52,7 @@ body {
 
 .nav-logo {
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .hamburger {
@@ -86,12 +86,6 @@ body {
   }
 }
 
-
-
-.nav-logo {
-  font-weight: 900;
-  font-size: 1.2rem;
-}
 
 /* Seção inicial (intro) */
 .intro {
