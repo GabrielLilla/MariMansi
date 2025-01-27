@@ -1,0 +1,208 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
+body {
+    background-color: #1c1c1c;
+    color: #fff;
+    font-family: "freight-neo-pro", sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+/* Barra de navegação */
+.navbar {
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    border-bottom: 1px solid #333;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 10; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    transition: color 0.2s ease;
+    font-size: 20px;
+}
+
+.nav-links li a:hover {
+    color: #ccc;
+}
+
+.nav-links .active a {
+    font-weight: 900;
+}
+
+.nav-logo {
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.hamburger {
+    display: none; /* Escondido por padrão */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: row; 
+        justify-content: center; 
+        gap: 1rem;
+        background-color: #1c1c1c;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.fotos-section {
+    margin-top: 100px;
+    padding: 2rem 5%;
+}
+
+.fotos-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.fotos-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.fotos-description {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.fotos-subtitle {
+    font-size: 1.2;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    color: #ccc;
+    font-weight: 900;
+}
+
+/* Texto "Veja também" */
+.veja-tambem {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+/* Projetos relacionados */
+.related-projects {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Ajusta o espaço entre os itens */
+    flex-wrap: wrap;
+    padding: 1rem 0; /* Adiciona espaçamento vertical */
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 300px; /* Define um tamanho fixo para os cards */
+}
+
+.project-card img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 30px;
+    border-radius: 4px;
+    font-weight: 900;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: row; 
+        gap: 1.5rem; /* Ajusta o espaço entre os itens no mobile */
+    }
+
+    .project-card {
+        max-width: 400px; /* Limita o tamanho no mobile */
+        margin: 0 auto; /* Centraliza os itens no mobile */
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
