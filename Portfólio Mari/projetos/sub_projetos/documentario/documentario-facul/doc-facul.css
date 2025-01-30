@@ -1,0 +1,172 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fonte padrão */
+body {
+    background-color: #1c1c1c;
+    color: #fff;
+    font-family: "freight-neo-pro", sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+/* Barra de navegação */
+.navbar {
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    border-bottom: 1px solid #333;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 10; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    transition: color 0.2s ease;
+    font-size: 20px;
+}
+
+.nav-links li a:hover {
+    color: #ccc;
+}
+
+.nav-links .active a {
+    font-weight: 900;
+}
+
+.nav-logo {
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        background-color: #1c1c1c;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Seção principal */
+.doc-section {
+    margin-top: 100px;
+    padding: 2rem 5%;
+    text-align: center;
+    flex-grow: 1; /* Ocupa todo o espaço disponível */
+}
+
+/* Container geral */
+.doc-container {
+    margin-bottom: 2rem;
+}
+
+.doc-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.doc-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+/* Grid dos vídeos */
+.doc-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Estilização de cada vídeo */
+.doc-item {
+    width: 45%; /* 2 vídeos lado a lado */
+    max-width: 600px;
+}
+
+.doc-item video {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Responsividade: No mobile, os vídeos ficam um abaixo do outro */
+@media (max-width: 768px) {
+    .doc-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doc-item {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}

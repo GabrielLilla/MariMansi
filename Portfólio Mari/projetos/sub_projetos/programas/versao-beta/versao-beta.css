@@ -1,0 +1,168 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
+body {
+    background-color: #1c1c1c;
+    color: #fff;
+    font-family: "freight-neo-pro", sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+/* Barra de navegação */
+.navbar {
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    transition: color 0.2s ease;
+    font-size: 20px;
+}
+
+.nav-links li a:hover {
+    color: #ccc;
+}
+
+.nav-links .active a {
+    font-weight: 900;
+}
+
+.nav-logo {
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.hamburger {
+    display: none; /* Escondido por padrão */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        background-color: #1c1c1c;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Seção principal */
+.versao-section {
+    margin-top: 100px;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.versao-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.versao-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+/* Estilo da lista de episódios */
+.videos-list {
+    display: flex;
+    flex-direction: column; /* Deixa um abaixo do outro */
+    align-items: center;
+    gap: 30px;
+}
+
+/* Thumbnail do episódio */
+.video-wrapper {
+    width: 100%;
+    max-width: 800px; /* Define um tamanho fixo para manter proporção */
+    text-align: center;
+}
+
+.video-thumb img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.video-thumb:hover img {
+    transform: scale(1.03);
+    opacity: 0.8;
+}
+
+/* Texto "Clique para conferir!" */
+.video-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .video-wrapper {
+        max-width: 95%; /* Ajusta para telas menores */
+    }
+}
+
+/* Footer fixo */
+.footer {
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
