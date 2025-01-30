@@ -85,12 +85,13 @@ body {
     }
 }
 
-/* Seção principal do clipe */
+/* Seção principal */
 .logo-section {
     margin-top: 100px;
     padding: 2rem 5%;
 }
 
+/* Título */
 .logo-container {
     text-align: center;
     margin-bottom: 2rem;
@@ -101,28 +102,62 @@ body {
     font-weight: 900;
     margin-bottom: 1rem;
 }
+
 .mush-title {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+/* Imagem única */
+.mush-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
     margin-bottom: 1rem;
 }
 
+/* Descrição */
 .logo-description {
     font-size: 1rem;
     line-height: 1.8rem;
-    margin-bottom: 2rem;
-}
-
-.logo-subtitle {
-    font-size: 1.2;
-    line-height: 1.8rem;
-    margin-bottom: 2rem;
-}
-
-.highlight {
+    margin-top: 10px;
     color: #ccc;
-    font-weight: 900;
 }
+
+/* Grid de adesivos */
+.adesivo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.adesivo-grid img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Grid de atualizações da logo */
+.att-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.att-grid img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
 
 /* Texto "Veja também" */
 .veja-tambem {
@@ -167,6 +202,7 @@ body {
     transform: scale(1.05);
 }
 
+/* Ano do projeto dentro do overlay */
 .project-overlay {
     position: absolute;
     top: 50%;
@@ -179,6 +215,21 @@ body {
     font-weight: 900;
 }
 
+.project-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.project-year {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+/* Hover no overlay */
 .project-card:hover .project-overlay {
     opacity: 1;
 }
@@ -193,6 +244,14 @@ body {
     .project-card {
         max-width: 400px; /* Limita o tamanho no mobile */
         margin: 0 auto; /* Centraliza os itens no mobile */
+    }
+
+    .adesivo-grid img {
+        width: 80px;
+    }
+
+    .att-grid img {
+        max-width: 200px;
     }
 }
 

@@ -85,12 +85,13 @@ body {
     }
 }
 
-/* Seção principal do clipe */
+/* Seção principal dos documentários */
 .doc-section {
     margin-top: 100px;
     padding: 2rem 5%;
 }
 
+/* Container geral */
 .doc-container {
     text-align: center;
     margin-bottom: 2rem;
@@ -102,21 +103,49 @@ body {
     margin-bottom: 1rem;
 }
 
+.doc-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+/* Grid dos documentários */
+.doc-grid {
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    gap: 40px; /* Espaço entre os documentários */
+    flex-wrap: wrap; /* Quebra linha no mobile */
+    margin-top: 20px;
+}
+
+/* Estilização de cada item */
+.doc-item {
+    width: 30%; /* Ocupa metade da tela no desktop */
+    text-align: center;
+}
+
+.doc-item img {
+    width: 80%; /* Faz as imagens ocuparem toda a largura do bloco */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.doc-item img:hover {
+    transform: scale(1.05);
+}
+
 .doc-description {
     font-size: 1rem;
     line-height: 1.8rem;
-    margin-bottom: 2rem;
-}
-
-.doc-subtitle {
-    font-size: 1.2;
-    line-height: 1.8rem;
-    margin-bottom: 2rem;
-}
-
-.highlight {
+    margin-top: 10px;
     color: #ccc;
-    font-weight: 900;
+}
+
+/* Responsividade: No mobile, coloca um abaixo do outro */
+@media (max-width: 768px) {
+    .doc-item {
+        width: 100%; /* Ocupa a tela toda */
+    }
 }
 
 /* Texto "Veja também" */
@@ -172,6 +201,20 @@ body {
     font-size: 30px;
     border-radius: 4px;
     font-weight: 900;
+}
+
+.project-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.project-year {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.8;
+    margin-top: 4px;
 }
 
 .project-card:hover .project-overlay {

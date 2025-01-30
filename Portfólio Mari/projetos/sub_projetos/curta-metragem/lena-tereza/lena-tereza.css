@@ -56,43 +56,20 @@ body {
 }
 
 .hamburger {
-    display: none; /* Escondido por padrão */
+    display: none;
     font-size: 1.5rem;
     cursor: pointer;
     color: #fff;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: row; 
-        justify-content: center; 
-        gap: 1rem;
-        background-color: #1c1c1c;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-}
-
-/* Seção principal do clipe */
+/* Seção principal */
 .curta-section {
     margin-top: 100px;
     padding: 2rem 5%;
+    text-align: center;
 }
 
 .curta-container {
-    text-align: center;
     margin-bottom: 2rem;
 }
 
@@ -102,21 +79,57 @@ body {
     margin-bottom: 1rem;
 }
 
-.curta-description {
-    font-size: 1rem;
-    line-height: 1.8rem;
-    margin-bottom: 2rem;
-}
-
 .curta-subtitle {
-    font-size: 1.2;
+    font-size: 1.2rem;
     line-height: 1.8rem;
     margin-bottom: 2rem;
 }
 
-.highlight {
+/* Estilo das imagens do Making Of */
+.making-of-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.making-of {
+    text-align: center;
+    max-width: 450px;
+}
+
+.making-of img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.making-of img:hover {
+    transform: scale(1.05);
+}
+
+.making-of p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
     color: #ccc;
-    font-weight: 900;
+}
+
+/* Estilo das fotos */
+.photo-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.photo {
+    max-width: 500px;
+}
+
+.photo img {
+    width: 100%;
 }
 
 /* Texto "Veja também" */
@@ -137,9 +150,9 @@ body {
 .projects-grid {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Ajusta o espaço entre os itens */
+    gap: 2rem;
     flex-wrap: wrap;
-    padding: 1rem 0; /* Adiciona espaçamento vertical */
+    padding: 1rem 0;
 }
 
 .project-card {
@@ -148,7 +161,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
-    width: 300px; /* Define um tamanho fixo para os cards */
+    width: 300px;
 }
 
 .project-card img {
@@ -173,22 +186,18 @@ body {
     border-radius: 4px;
     font-weight: 900;
 }
-
-.project-card:hover .project-overlay {
-    opacity: 1;
+.project-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
 }
 
-/* Responsividade para mobile */
-@media (max-width: 768px) {
-    .projects-grid {
-        flex-direction: row; 
-        gap: 1.5rem; /* Ajusta o espaço entre os itens no mobile */
-    }
-
-    .project-card {
-        max-width: 400px; /* Limita o tamanho no mobile */
-        margin: 0 auto; /* Centraliza os itens no mobile */
-    }
+.project-year {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.8;
+    margin-top: 4px;
 }
 
 /* Footer */
@@ -206,4 +215,33 @@ body {
 
 .footer p {
     font-size: 0.9rem;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        background-color: #1c1c1c;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .making-of-container, .photo-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }

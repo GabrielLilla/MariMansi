@@ -85,11 +85,13 @@ body {
     }
 }
 
+/* Seção principal */
 .fotos-section {
     margin-top: 100px;
     padding: 2rem 5%;
 }
 
+/* Container principal */
 .fotos-container {
     text-align: center;
     margin-bottom: 2rem;
@@ -101,21 +103,50 @@ body {
     margin-bottom: 1rem;
 }
 
+.fotos-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+/* 🔹 Galeria de Fotos */
+.fotos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre as imagens */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Cada item da galeria */
+.fotos-item {
+    width: 600px; /* Define 2 imagens por linha */
+    text-align: center;
+}
+
+.fotos-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.fotos-item img:hover {
+    transform: scale(1.05);
+}
+
 .fotos-description {
     font-size: 1rem;
     line-height: 1.8rem;
-    margin-bottom: 2rem;
-}
-
-.fotos-subtitle {
-    font-size: 1.2;
-    line-height: 1.8rem;
-    margin-bottom: 2rem;
-}
-
-.highlight {
+    margin-top: 10px;
     color: #ccc;
-    font-weight: 900;
+}
+
+/* Responsividade: No mobile, coloca um abaixo do outro */
+@media (max-width: 768px) {
+    .fotos-item {
+        width: 100%; /* Ocupa a tela toda */
+    }
 }
 
 /* Texto "Veja também" */
@@ -161,18 +192,36 @@ body {
     transform: scale(1.05);
 }
 
+/* Estilização do overlay do projeto */
 .project-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
+    text-align: center;
     padding: 0.5rem 1rem;
-    font-size: 30px;
+    font-size: 22px;
+    font-weight: 900;
     border-radius: 4px;
+}
+
+/* Ano do projeto dentro do overlay */
+.project-title {
+    display: block;
+    font-size: 20px;
     font-weight: 900;
 }
 
+.project-year {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+/* Hover no overlay */
 .project-card:hover .project-overlay {
     opacity: 1;
 }

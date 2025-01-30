@@ -85,7 +85,7 @@ body {
     }
 }
 
-/* Seção principal do clipe */
+/* Seção principal do programa */
 .programas-section {
     margin-top: 100px;
     padding: 2rem 5%;
@@ -105,18 +105,34 @@ body {
 .programas-description {
     font-size: 1rem;
     line-height: 1.8rem;
+    margin-top: 10px;
     margin-bottom: 2rem;
+    color: #ccc;
 }
 
 .programas-subtitle {
-    font-size: 1.2;
+    font-size: 1.2rem;
     line-height: 1.8rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+/* Ajuste da imagem do "Versão Beta" */
+.programas-image {
+    text-align: center;
     margin-bottom: 2rem;
 }
 
-.highlight {
-    color: #ccc;
-    font-weight: 900;
+.programas-image img {
+    width: 100%;
+    max-width: 600px; /* Define um tamanho fixo para manter proporção */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.programas-image img:hover {
+    transform: scale(1.05);
 }
 
 /* Texto "Veja também" */
@@ -162,18 +178,36 @@ body {
     transform: scale(1.05);
 }
 
+/* Estilização do overlay do projeto */
 .project-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
+    text-align: center;
     padding: 0.5rem 1rem;
-    font-size: 30px;
+    font-size: 22px;
+    font-weight: 900;
     border-radius: 4px;
+}
+
+/* Ano do projeto dentro do overlay */
+.project-title {
+    display: block;
+    font-size: 20px;
     font-weight: 900;
 }
 
+.project-year {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+/* Hover no overlay */
 .project-card:hover .project-overlay {
     opacity: 1;
 }
@@ -188,6 +222,10 @@ body {
     .project-card {
         max-width: 400px; /* Limita o tamanho no mobile */
         margin: 0 auto; /* Centraliza os itens no mobile */
+    }
+
+    .programas-image img {
+        max-width: 100%; /* Garante que se ajuste bem no mobile */
     }
 }
 
