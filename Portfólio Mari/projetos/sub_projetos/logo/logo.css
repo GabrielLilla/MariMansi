@@ -113,8 +113,7 @@ body {
 /* Imagem única */
 .mush-image img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
+    max-width: 700px;
     margin-bottom: 1rem;
 }
 
@@ -136,7 +135,8 @@ body {
 }
 
 .adesivo-grid img {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -146,7 +146,7 @@ body {
 .att-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
     margin-top: 1rem;
 }
@@ -246,16 +246,22 @@ body {
         margin: 0 auto; /* Centraliza os itens no mobile */
     }
 
+    .mush-image img{
+        width: 100%;
+        max-width: 200px;
+    }
+
     .adesivo-grid img {
-        width: 80px;
+        width: 100%;
+        max-width: 103px;
     }
 
     .att-grid img {
-        max-width: 200px;
+        width: 100%;
+        max-width: 150px;
     }
 }
 
-/* Footer */
 .footer {
     background-color: #121212;
     color: #fff;

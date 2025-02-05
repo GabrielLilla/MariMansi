@@ -75,3 +75,30 @@ nextBtn.addEventListener('click', () => {
   currentIndex++;
   showImage(currentIndex);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const galeria = document.getElementById("galeria");
+  const totalFotos = 321; // Quantidade total de fotos
+  const horizontalFotos = []; // Fotos horizontais 
+
+  for (let i = 1; i <= totalFotos; i++) {
+      // Criar o container da imagem
+      const div = document.createElement("div");
+      div.classList.add("galeria-item");
+
+      // Se a foto for horizontal, adiciona a classe correspondente
+      if (horizontalFotos.includes(i)) {
+          div.classList.add("horizontal");
+      }
+
+      // Criar a imagem
+      const img = document.createElement("img");
+      img.src = `../../../../assets/fotos-show/show${i}.jpg`;
+      img.alt = `Foto Show ${i}`;
+
+      // Adicionar a imagem ao container
+      div.appendChild(img);
+      galeria.appendChild(div);
+  }
+});
+

@@ -85,22 +85,24 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Estilo das imagens do Making Of */
+/* 🔹 Making Of - Ajuste para ficar maior no celular */
 .making-of-container {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 8rem;
     flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 
 .making-of {
     text-align: center;
-    max-width: 450px;
+    max-width: 500px; /* Define um limite para desktop */
+    width: 100%;
 }
 
 .making-of img {
     width: 100%;
+    max-width: 500px; /* Mantém um tamanho adequado */
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -115,7 +117,7 @@ body {
     color: #ccc;
 }
 
-/* Estilo das fotos */
+/* 🔹 Fotos */
 .photo-container {
     display: flex;
     justify-content: center;
@@ -125,99 +127,17 @@ body {
 }
 
 .photo {
-    max-width: 500px;
+    text-align: center;
 }
 
 .photo img {
     width: 100%;
-}
-
-/* Texto "Veja também" */
-.veja-tambem {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #ccc;
-}
-
-/* Projetos relacionados */
-.related-projects {
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.projects-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding: 1rem 0;
-}
-
-.project-card {
-    position: relative;
-    overflow: hidden;
+    max-width: 700px;
+    height: auto;
     border-radius: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    width: 300px;
 }
 
-.project-card img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover img {
-    transform: scale(1.05);
-}
-
-.project-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    padding: 0.5rem 1rem;
-    font-size: 30px;
-    border-radius: 4px;
-    font-weight: 900;
-}
-.project-title {
-    display: block;
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.project-year {
-    display: block;
-    font-size: 16px;
-    font-weight: 700;
-    opacity: 0.8;
-    margin-top: 4px;
-}
-
-/* Footer */
-.footer {
-    background-color: #121212;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 1rem;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer p {
-    font-size: 0.9rem;
-}
-
-/* Responsividade para mobile */
+/* 🔹 Responsividade para Mobile */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -240,8 +160,38 @@ body {
         display: block;
     }
 
+    /* 🔹 Centralizando no Mobile e aumentando tamanho */
     .making-of-container, .photo-container {
         flex-direction: column;
         align-items: center;
+        gap: 2rem;
     }
+
+    .making-of img {
+        max-width: 100%; /* Ocupa a tela toda no celular */
+    }
+
+    .photo img {
+        max-width: 100%; /* Ajuste para centralizar melhor */
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 0.9rem;
 }
